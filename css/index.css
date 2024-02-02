@@ -399,20 +399,65 @@ h2 {
 
 /* section - 3 - advertisingSlide ================================= */
 
-.advertisingSlide .slick-dots {
+#section .advertisingSlide .slide {
+  position: relative;
+}
+
+#section .advertisingSlide .imagebox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#section .advertisingSlide .textbox {
   position: absolute;
-  width: 70%;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
 }
 
-.advertisingSlide .slick-dots li {
+#section .advertisingSlide .textbox h3 {
+  font-size: 42px;
+  font-weight: 100;
+}
+
+#section .advertisingSlide .textbox h3 .textbox_bold {
+  font-weight: 800;
+}
+
+#section .advertisingSlide .textbox p {
+  padding: 20px 0 40px;
+  font-size: 20px;
+  color: gray;
+}
+
+#section .advertisingSlide .advertisingSlide_bt {
   display: inline-block;
-  padding: 40px 0;
+  padding: 12px 32px;
+  border-radius: 40px;
+  border: 1px solid gray;
+  color: gray;
+  transition: all 0.3s;
 }
 
-.advertisingSlide .slick-dots li button {
+#section .advertisingSlide .advertisingSlide_bt:hover {
+  color: white;
+  background-color: #1a325e;
+  border: 1px solid #1a325e;
+}
+
+#section .advertisingSlide .slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#section .advertisingSlide .slick-dots li {
+  display: inline-block;
+  padding: 20px 0;
+}
+
+#section .advertisingSlide .slick-dots li button {
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -425,7 +470,7 @@ h2 {
   opacity: 0.8;
 }
 
-.advertisingSlide .slick-dots li.slick-active button {
+#section .advertisingSlide .slick-dots li.slick-active button {
   background-color: #1c6ab3;
   opacity: 1;
 }
@@ -656,6 +701,7 @@ h2 {
   display: flex;
   height: 50px;
   align-items: center;
+  justify-content: center;
 }
 
 /* section 끝 ================================= */
@@ -757,7 +803,7 @@ h2 {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 40px;
+  padding: 26px 40px;
   font-weight: 300;
   font-size: 15px;
   transition: all 0.5s;
@@ -806,6 +852,19 @@ h2 {
 
 .shortcutsbox.active .shortcutsbox_bt a i {
   transform: rotate(180deg);
+}
+
+.shortcutsbox_support {
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+.shortcutsbox .shortcutsbox_support .shortcutsbox_contents a {
+  padding: 2px 0;
+}
+
+.shortcutsbox_support a strong {
+  color: #009bf0;
+  font-size: 16px;
 }
 
 /* aside - popup ================================= */

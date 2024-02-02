@@ -215,15 +215,30 @@
                                 <div class="imagebox">
                                     <img src="./image/bannerC_01.jpg" alt="보건복지부 인증 전문의 2인 진료">
                                 </div>
+                                <div class="textbox">
+                                    <h3><span>보건복지부 인증</span><span class="textbox_bold">전문의 2인 진료</span></h3>
+                                    <p>구강악안면외과, 보존과</p>
+                                    <a href="#" class="advertisingSlide_bt">자세히 보기</a>
+                                </div>
                             </div>
                             <div class="slide">
                                 <div class="imagebox">
                                     <img src="./image/bannerC_02.jpg" alt="CT 촬영 및 진단, 첨단 디지털 CT 장비 보유">
                                 </div>
+                                <div class="textbox">
+                                    <h3><span>CT촬영 및 진단</span><span class="textbox_bold">첨단 디지털 CT 장비 보유</span></h3>
+                                    <p>일반 X선 사진보다 더 정확하고 정밀합니다</p>
+                                    <a href="#" class="advertisingSlide_bt">자세히 보기</a>
+                                </div>
                             </div>
                             <div class="slide">
                                 <div class="imagebox">
                                     <img src="./image/bannerC_03.jpg" alt="은평타임치과 치료전후사진">
+                                </div>
+                                <div class="textbox">
+                                    <h3><span>은평타임치과</span><span class="textbox_bold">치료전후사진</span></h3>
+                                    <p><span>다양한 시술 사례를 통해</span><span>은평타임치과의 우수성을 확인해보세요</span></p>
+                                    <a href="#" class="advertisingSlide_bt">자세히 보기</a>
                                 </div>
                             </div>
                         </div>
@@ -354,10 +369,10 @@
                             </ul>
                             <ul class="contact">
                                 <li class="titlebox">
-                                    <h3>연락처</h3>
+                                    <h3>대표번호</h3>
                                 </li>
                                 <li class="textbox">
-                                    <p>대표번호 <strong>02-6481-2875</strong></p>
+                                    <p>02-6481-2875</p>
                                 </li>
                             </ul>
                         </li>
@@ -388,14 +403,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <ul class="relationship_slide">
-                        <li><img src="./image/img_slide_01.jpg" alt="보건복지부"></li>
-                        <li><img src="./image/img_slide_02.jpg" alt="국민건강보험"></li>
-                        <li><img src="./image/img_slide_03.jpg" alt="경희대학교"></li>
-                        <li><img src="./image/img_slide_04.jpg" alt="대한구강악안면외과학회"></li>
-                        <li><img src="./image/img_slide_05.jpg" alt="대한치과위생사협회"></li>
-                        <li><img src="./image/img_slide_06.jpg" alt="대한치과의사협회"></li>
-                    </ul> -->
                 </div>
             </div>
         </section>
@@ -445,10 +452,11 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="shortcutsbox_support">
                     <ul>
                         <li class="shortcutsbox_contents"><a href="#">고객지원센터</a></li>
-                        <li class="shortcutsbox_contents"><a href="#">02-6481-2875</a></li>
+                        <li class="shortcutsbox_contents"><a href="Tel:02-6481-2875"><strong>02-6481-2875</strong></a>
+                        </li>
                     </ul>
                 </li>
                 <li class="shortcutsbox_bt"><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
@@ -532,6 +540,8 @@
 
 
             // ⭐⭐ 자바스크립트로 기능넣기 ⭐⭐
+            // 화면 사이즈가 바뀔 때 값을 다시 정의 필요
+            // 화면 사이즈(960px)보다 작으면 일정 스크립트들은 작동하지 않게 수정 필요
 
             let header = document.querySelector("#header");
             let header_nav = document.querySelector(".header_nav");
@@ -546,6 +556,7 @@
             // 초기 설정
             header_nav.style.height = `${minHeight}px`;
             header_navline.style.bottom = `-${minHeight}px`;
+            document.querySelector("#section").style.marginTop = `${minHeight}px`;
 
             // 최대 높이 계산 
             // 인라인 스타일이 아니면 getAttribute로 안 가져와져서 getComputedStyle 을 사용

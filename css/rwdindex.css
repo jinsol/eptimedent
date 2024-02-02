@@ -8,7 +8,7 @@
     display: none;
   }
   #header .row {
-    padding: 0 30px;
+    padding: 0 36px;
   }
 
   #header .header_logo .header_logoAd {
@@ -30,11 +30,14 @@
   #header .depth_01 .header_nav_mainmenu > a {
     justify-content: flex-start;
   }
-
+  #header .depth_01 .header_nav_mainmenu > a::after {
+    display: none;
+  }
   #header .depth_02 {
     position: relative;
     visibility: visible;
     opacity: 1;
+    border-right: none;
   }
 
   #header .header_nav_mainmenu:first-child .depth_02 {
@@ -79,6 +82,10 @@
   #section .introduction .cardbox_02 li img {
     display: flex;
     width: 100%;
+  }
+
+  #section .advertisingSlide .textbox {
+    padding: 0 36px;
   }
 
   /* section - 4 - community ================================= */
