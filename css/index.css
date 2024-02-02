@@ -751,7 +751,7 @@ h2 {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(80%, -50%);
   background-color: white;
   border: 1px solid #eaeeef;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -760,8 +760,13 @@ h2 {
   padding: 40px;
   font-weight: 300;
   font-size: 15px;
+  transition: all 0.5s;
 }
-.shortcutsbox_inside {
+.shortcutsbox.active {
+  transform: translate(0%, -50%);
+}
+.shortcutsbox_inside,
+.shortcutsbox_outside {
   border-bottom: 1px solid #eaeeef;
   padding-bottom: 20px;
 }
@@ -780,11 +785,6 @@ h2 {
   color: #2f2f2f;
 }
 
-.shortcutsbox .shortcutsbox_contents a:hover {
-  color: #1a325e;
-  font-weight: 700;
-}
-
 .shortcutsbox .shortcutsbox_bt a {
   width: 34px;
   height: 34px;
@@ -801,7 +801,11 @@ h2 {
 
 .shortcutsbox .shortcutsbox_bt a i {
   color: white;
-  /* transform: rotate(180deg); */
+  transition: all 0.3s;
+}
+
+.shortcutsbox.active .shortcutsbox_bt a i {
+  transform: rotate(180deg);
 }
 
 /* aside - popup ================================= */

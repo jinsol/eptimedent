@@ -95,9 +95,21 @@
     flex-direction: column;
   }
 
+  #section .community .cardbox li:nth-child(1) > a {
+    flex-direction: row;
+  }
+
   #section .community .cardbox li:nth-child(2),
   #section .community .cardbox li:nth-child(3) {
     margin-left: 0;
+  }
+
+  #section .community .cardbox > li > a {
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+  #section .community .cardbox > li > a:hover {
+    transform: rotateZ(0);
   }
 
   /* section - 5 - information ================================= */
@@ -114,6 +126,9 @@
 
   #section .information .information_wrap > li > ul {
     padding: 36px;
+    #section .community .cardbox > li > a:hover {
+      transform: rotateZ(-3deg);
+    }
   }
 
   /* section ================================= */

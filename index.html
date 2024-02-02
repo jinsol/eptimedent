@@ -265,7 +265,7 @@
                                 </div>
                                 <div class="textbox">
                                     <h3 class="title">연신내치과 자연치아를 지키는 것이 중요합니다</h3>
-                                    <p class="text"> 우리가족 좋은 주치의 은평타임치과 <em>- 네비게이션 </em>
+                                    <p class="text"> 우리가족 좋은 주치의 은평타임치과 <em>- 네비게이션</em>
                                         <em>- 임플란트/임플란트 재수술</em>
                                         <em>- 매복사랑니발치/신경치료 </em> 보건복지부 인증 구강악안면외과, 보존과 의사 2인 진료 / 자연치아를 살리는 치료중심 / 안전하고
                                         정확한 진료
@@ -448,6 +448,7 @@
                 <li>
                     <ul>
                         <li class="shortcutsbox_contents"><a href="#">고객지원센터</a></li>
+                        <li class="shortcutsbox_contents"><a href="#">02-6481-2875</a></li>
                     </ul>
                 </li>
                 <li class="shortcutsbox_bt"><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
@@ -538,14 +539,13 @@
             let depth_01 = document.querySelector(".depth_01");
             let depth_02 = document.querySelectorAll(".depth_02");
 
-            // 여기서는 parseInt를 사용 안 함
-            let minHeight = getComputedStyle(depth_01).height;
+            let minHeight = parseInt(getComputedStyle(depth_01).height);
             let maxHeight = 0;
             let depth_02_height = 0;
 
             // 초기 설정
-            header_nav.style.height = minHeight;
-            header_navline.style.bottom = `-${minHeight}`;
+            header_nav.style.height = `${minHeight}px`;
+            header_navline.style.bottom = `-${minHeight}px`;
 
             // 최대 높이 계산 
             // 인라인 스타일이 아니면 getAttribute로 안 가져와져서 getComputedStyle 을 사용
@@ -553,10 +553,12 @@
                 // 여기서는 parseInt를 사용해야 숫자로 최대값을 구할 수 있었음
                 depth_02_height = parseInt(getComputedStyle(depth_02[i]).height);
                 if (depth_02_height > maxHeight) {
-                    // 2024.01.26 (금) - 배열array 중 최대값or최소값 구하는 문제 활용
+                    // 2024.01.26 (금) - 64_배열array 메서드 중 최대값or최소값 구하는 문제 활용
                     maxHeight = depth_02_height;
                 }
-            }
+            };
+
+
 
             // 모든 depth_02에 최대 높이 적용 (유사배열이라 forEach 사용)
             depth_02.forEach(function (value, index) {
@@ -564,19 +566,24 @@
                 value.style.height = `${maxHeight + 15}px`;
             });
 
-            // 이벤트 (depth_01에 마우스를 올리거나 내릴 때)
+
+            // 표준이벤트모델 (depth_01에 마우스를 올리거나 내릴 때) 
             depth_01.addEventListener("mouseover", function () {
-                header_nav.style.height = `${maxHeight + 15}px`;
+                header_nav.style.height = `${maxHeight + minHeight + 15}px`;
                 header.classList.add("active");
                 document.querySelector(".blackbox").classList.add("active");
             });
 
             depth_01.addEventListener("mouseleave", function () {
-                document.querySelector(".header_nav").style.height = minHeight;
+                document.querySelector(".header_nav").style.height = `${minHeight}px`;
                 header.classList.remove("active");
                 document.querySelector(".blackbox").classList.remove("active");
             });
 
+            document.querySelector(".shortcutsbox_bt a").onclick = function () {
+                document.querySelector(".shortcutsbox").classList.toggle("active");
+
+            };
 
 
 
