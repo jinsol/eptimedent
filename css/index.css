@@ -336,6 +336,10 @@ h2 {
   border: 1px solid #eaeeef;
 }
 
+#section .introduction .cardbox_01 li a {
+  display: block;
+}
+
 #section .introduction .cardbox_02 {
   display: flex;
   flex-wrap: wrap;
