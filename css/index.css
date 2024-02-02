@@ -1,0 +1,846 @@
+/* index.css */
+@charset "utf-8";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+
+/* 공통속성 시작 */
+
+html,
+body {
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard-Regular", sans-serif;
+  letter-spacing: -0.8px;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.line {
+  height: 1px;
+  width: 100vw;
+  display: block;
+  background-color: #eaeeef;
+}
+
+.textbox span {
+  display: block;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+/* 공통속성 끝 */
+/* header ================================= */
+
+#header {
+  background-color: white;
+  position: relative;
+  z-index: 99;
+}
+
+#header .header_info {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 13px;
+  color: gray;
+  padding: 16px 0;
+}
+
+#header .header_info .header_sns ul,
+#header .header_info .header_login ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header .header_info .header_sns ul li {
+  margin-right: 16px;
+}
+
+#header .header_info .header_login ul li {
+  margin-left: 16px;
+}
+
+#header .header_logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .header_logo .header_logoAd {
+  position: absolute;
+  left: 0;
+  width: 40%;
+}
+
+#header .header_logo .header_logoAd img {
+  height: 80px;
+}
+
+#header .header_logo .header_logoImage {
+  padding: 26px 0 16px;
+}
+
+#header .header_logo .header_logoImage a {
+  display: flex;
+}
+
+#header .header_logo .header_logoImage a img {
+  width: 200px;
+}
+
+/* header Nav ================================= */
+
+#header .header_nav {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #eaeeef;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+#header.active .header_nav {
+  border-bottom-right-radius: 50px;
+}
+
+#header .depth_01 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header .depth_01 .header_nav_mainmenu {
+  width: 100%;
+  position: relative;
+}
+
+#header .depth_01 .header_nav_mainmenu > a {
+  display: flex;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding: 20px 0;
+
+  transition: all 0.3s;
+}
+
+#header .depth_01 .header_nav_mainmenu > a:hover {
+  color: #1c6ab3;
+}
+
+#header .depth_01 .header_nav_mainmenu > a::after {
+  display: block;
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+
+  width: 0px;
+  height: 0px;
+  border-radius: 8px;
+  background-color: #1c6ab3;
+
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#header .depth_01 .header_nav_mainmenu > a:hover::after {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  opacity: 1;
+}
+
+#header .depth_02 {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eaeeef;
+
+  position: absolute;
+  width: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+#header .header_nav_mainmenu:first-child .depth_02 {
+  border-left: 1px solid #eaeeef;
+}
+
+#header.active .header_nav .depth_02 {
+  visibility: visible;
+  opacity: 1;
+}
+
+#header .depth_01 .header_nav_mainmenu:hover .depth_02 {
+  background-color: rgba(0, 155, 240, 0.05);
+}
+
+#header .depth_02 li a {
+  color: gray;
+  font-size: 17px;
+  font-weight: 300;
+
+  padding: 15px 16px;
+  display: flex;
+}
+
+#header .depth_02 li a:hover {
+  color: #1c6ab3;
+  font-weight: 700;
+}
+
+#header .header_navline {
+  position: absolute;
+  display: none;
+}
+
+#header.active .header_navline {
+  display: block;
+}
+
+/* section 시작 ================================= */
+
+#section {
+  position: relative;
+}
+
+#section > div {
+  padding: 100px 0;
+}
+
+/* section - 1 - mainSlide ================================= */
+
+#section .mainSlide {
+  padding: 0;
+  position: relative;
+}
+
+#section .mainSlide .slideOuter,
+#section .mainSlide .slideInner,
+#section .mainSlide .slick-list,
+#section .mainSlide .slick-track,
+#section .mainSlide .imagebox {
+  width: 100%;
+  height: 100%;
+}
+
+#section .mainSlide .imagebox {
+  display: flex;
+}
+
+#section .mainSlide .imagebox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#section .mainSlide .textbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+#section .mainSlide .textbox p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8rem;
+  padding-top: 20px;
+}
+
+#section .mainSlide .slick-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+  text-align: center;
+}
+
+#section .mainSlide .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#section .mainSlide .slick-dots li.slick-active {
+  color: red;
+}
+
+/* section - 2 - introduction ================================= */
+
+#section .introduction {
+  text-align: center;
+}
+
+#section .introduction .textbox h2 span strong {
+  color: #009bf0;
+  font-weight: 800;
+}
+
+#section .introduction .textbox p {
+  padding: 40px 0;
+  color: gray;
+}
+
+#section .introduction .cardbox_01 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 20px 0 80px 0;
+}
+
+#section .introduction .cardbox_01 li {
+  flex: 1 1 25%;
+  border: 1px solid #eaeeef;
+}
+
+#section .introduction .cardbox_02 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+#section .introduction .cardbox_02 > li {
+  flex: 1 1 33.33%;
+}
+
+#section .introduction .cardbox_02 > li a {
+  display: flex;
+}
+
+#section .introduction .cardbox_02 > li img {
+  display: flex;
+  max-width: 100%;
+}
+
+#section .introduction .cardbox_02 > li:nth-child(4) {
+  flex: 0 1 33.35%;
+}
+#section .introduction .cardbox_02 > li:last-child {
+  flex: 0 2 66.6%;
+  height: 100%;
+  width: 66.65%;
+}
+
+.cardbox_02 .slick-dots {
+  position: absolute;
+  width: 66%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.cardbox_02 .slick-dots li {
+  display: inline-block;
+  padding: 60px 0;
+}
+
+.cardbox_02 .slick-dots li.slick-active button {
+  background-color: #ff9966;
+  opacity: 1;
+}
+.cardbox_02 .slick-dots li button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  text-indent: -999px;
+  overflow: hidden;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+/* section - 3 - advertisingSlide ================================= */
+
+.advertisingSlide .slick-dots {
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.advertisingSlide .slick-dots li {
+  display: inline-block;
+  padding: 40px 0;
+}
+
+.advertisingSlide .slick-dots li button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 0;
+  background-color: gray;
+  cursor: pointer;
+  text-indent: -999px;
+  overflow: hidden;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.advertisingSlide .slick-dots li.slick-active button {
+  background-color: #1c6ab3;
+  opacity: 1;
+}
+
+/* section - 4 - community ================================= */
+
+#section .community {
+  text-align: center;
+  background-image: url(../image/bannerD_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-size: 42px;
+  color: white;
+  word-break: keep-all;
+}
+
+#section .community .titlebox h2 {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+#section .community .cardbox {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+#section .community .cardbox > li > a {
+  display: block;
+  padding: 36px;
+  height: 100%;
+
+  background-color: white;
+  border-bottom-right-radius: 50px;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.5s;
+}
+
+#section .community .cardbox > li > a:hover {
+  transform: rotateZ(-3deg);
+}
+
+#section .community .cardbox .textbox .text {
+  color: gray;
+  font-size: 16px;
+  line-height: 1.6rem;
+  padding-top: 16px;
+}
+#section .community .cardbox .textbox .title {
+  color: black;
+  font-size: 24px;
+  line-height: 1.8rem;
+}
+
+#section .community .cardbox li:nth-child(1) {
+  flex: 2;
+}
+
+#section .community .cardbox li:nth-child(1) > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section .community .cardbox li:nth-child(1) .textbox {
+  flex: 0 0 50%;
+}
+
+#section .community .cardbox .textbox strong {
+  color: #009bf0;
+  font-size: 16px;
+}
+
+#section .community .cardbox li:nth-child(1) .imagebox {
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 350px;
+}
+
+#section .community .cardbox li:nth-child(1) .imagebox img {
+  height: 100%;
+  width: auto;
+}
+
+#section .community .cardbox li:nth-child(2),
+#section .community .cardbox li:nth-child(3) {
+  flex: 1;
+  margin-left: 16px;
+}
+
+#section .community .cardbox li:nth-child(2) .imagebox {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+/* #section .community .cardbox li:nth-child(3) > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+#section .community .blogbox {
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#section .community .blogbox i {
+  color: #2db400;
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+#section .community .blogbox p {
+  font-weight: bold;
+  color: black;
+}
+
+#section .community .blogbox p span {
+  display: block;
+  font-weight: 300;
+  color: gray;
+  font-size: 14px;
+}
+
+#section .community .cardbox .textbox em {
+  display: block;
+}
+
+/* section - 5 - information ================================= */
+
+#section .information .information_wrap {
+  display: flex;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+#section .information .information_wrap > li {
+  flex: 1;
+  padding-right: 16px;
+}
+
+#section .information .information_wrap > li:not(:last-child) {
+  margin-right: 16px;
+  border-right: 1px solid #eaeeef;
+}
+
+#section .information .notice,
+#section .information .review {
+  width: 100%;
+  height: 50%;
+}
+
+#section .information .titlebox {
+  font-size: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeeef;
+}
+
+#section .information .textbox,
+#section .information .mapbox {
+  color: gray;
+  font-weight: 300;
+}
+
+#section .information .textbox li {
+  padding: 6px 0;
+}
+
+#section .information .textbox .post {
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+#section .information .textbox .post:hover {
+  color: #1a325e;
+  font-weight: 600;
+}
+
+#section .information .mapbox {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#section .information .mapbox iframe {
+  width: 100%;
+  min-height: 220px;
+}
+
+#section .information .hours {
+  padding-bottom: 16px;
+}
+
+#section .information .hours .hours_list {
+  display: flex;
+  justify-content: space-between;
+}
+#section .information .hours strong {
+  color: #1a325e;
+  font-size: 17px;
+}
+
+#section .information .contact p {
+  font-size: 24px;
+  padding: 4px 0;
+  color: #1a325e;
+  font-weight: bold;
+}
+
+/* section - 6 - relationship ================================= */
+
+#section > div.relationship {
+  padding: 20px 0;
+}
+#section .relationship {
+  border-top: 1px solid #eaeeef;
+  border-bottom: 1px solid #eaeeef;
+}
+
+#section .relationship .slick-initialized .slick-slide {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+/* section 끝 ================================= */
+/* footer ================================= */
+
+#footer {
+  padding: 60px 0;
+  color: gray;
+}
+
+.footer_terms ul {
+  display: flex;
+  justify-content: center;
+}
+.footer_terms ul li {
+  padding: 0 10px;
+}
+.footer_terms ul li:not(:last-child) {
+  border-right: 1px solid gray;
+}
+
+.footer_logo {
+  display: flex;
+  justify-content: center;
+  padding: 36px 0;
+}
+
+.footer_info {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+.footer_info li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.footer_info li:nth-child(1),
+.footer_info li:nth-child(2),
+.footer_info li:nth-child(3) {
+  border-right: 1px solid gray;
+}
+.footer_info li:nth-child(5),
+.footer_info li:last-child {
+  display: block;
+}
+
+.footer_info strong {
+  font-weight: bolder;
+  color: #2f2f2f;
+}
+
+/* ect ================================= */
+
+.blackbox.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+}
+
+/* aside - topbox ================================= */
+
+.topbox a {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* aside - shortcuts ================================= */
+
+.shortcuts {
+  display: block;
+}
+
+.shortcutsbox {
+  display: block;
+  height: auto;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #eaeeef;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 40px;
+  font-weight: 300;
+  font-size: 15px;
+}
+.shortcutsbox_inside {
+  border-bottom: 1px solid #eaeeef;
+  padding-bottom: 20px;
+}
+
+.shortcutsbox_outside {
+  padding-top: 20px;
+}
+
+.shortcutsbox .shortcutsbox_contents i {
+  margin-right: 16px;
+  width: 16px;
+}
+.shortcutsbox .shortcutsbox_contents a {
+  display: block;
+  padding: 10px 0;
+  color: #2f2f2f;
+}
+
+.shortcutsbox .shortcutsbox_contents a:hover {
+  color: #1a325e;
+  font-weight: 700;
+}
+
+.shortcutsbox .shortcutsbox_bt a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shortcutsbox .shortcutsbox_bt a i {
+  color: white;
+  /* transform: rotate(180deg); */
+}
+
+/* aside - popup ================================= */
+
+.popupbox {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 281px;
+}
+
+.popupbox .slick-current {
+  /* animation: bounceIn 1s 1 both 0.6s; */
+  animation: bounce;
+  animation-duration: 2s;
+}
+
+.popupbox .slick-dots {
+  text-align: center;
+}
+
+.popupbox .slick-dots li {
+  display: inline-block;
+}
+
+.popupbox .slick-dots li button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 0;
+  background-color: gray;
+  cursor: pointer;
+  text-indent: -999px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.popupbox .slick-dots li.slick-active button {
+  background-color: #009bf0;
+}

@@ -1,0 +1,127 @@
+/* rwdindex.css */
+
+@media screen and (max-width: 960px) {
+  /* header ================================= */
+
+  #header .header_nav,
+  #header .header_info {
+    display: none;
+  }
+  #header .row {
+    padding: 0 30px;
+  }
+
+  #header .header_logo .header_logoAd {
+    display: none;
+  }
+
+  #header .header_nav::before {
+    display: none;
+  }
+
+  #header .depth_01 {
+    flex-direction: column;
+  }
+
+  #header .depth_01 > li > a {
+    justify-content: flex-start;
+  }
+
+  #header .depth_01 .header_nav_mainmenu > a {
+    justify-content: flex-start;
+  }
+
+  #header .depth_02 {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #header .header_nav_mainmenu:first-child .depth_02 {
+    border-left: none;
+  }
+
+  /* section ================================= */
+
+  #section > div {
+    padding: 20px 0;
+  }
+
+  /* section - 1 - mainSlide ================================= */
+
+  #section .mainSlide {
+    height: 50vh;
+  }
+
+  /* section - 2 - introduction ================================= */
+
+  #section .introduction {
+    padding: 60px 0 20px 0;
+  }
+
+  #section .introduction .cardbox_01 {
+    flex-direction: column;
+    margin: 20px 0 0 0;
+  }
+
+  #section .introduction .cardbox_01 li {
+    flex: 1 1 50%;
+  }
+
+  #section .introduction .cardbox_02 li,
+  #section .introduction .cardbox_02 > li:nth-child(4) {
+    flex: 1 1 50%;
+  }
+  #section .introduction .cardbox_02 > li:nth-child(5) {
+    flex: 1 1 auto;
+  }
+
+  #section .introduction .cardbox_02 li img {
+    display: flex;
+    width: 100%;
+  }
+
+  /* section - 4 - community ================================= */
+
+  #section .community .cardbox {
+    flex-direction: column;
+  }
+
+  #section .community .cardbox > li > a {
+    display: flex;
+  }
+
+  #section .community .cardbox > li > a:last-child {
+    flex-direction: column;
+  }
+
+  #section .community .cardbox li:nth-child(2),
+  #section .community .cardbox li:nth-child(3) {
+    margin-left: 0;
+  }
+
+  /* section - 5 - information ================================= */
+
+  #section .information .information_wrap {
+    flex-direction: column;
+  }
+  #section .information .information_wrap > li {
+    padding-right: 0;
+  }
+  #section .information .information_wrap > li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  #section .information .information_wrap > li > ul {
+    padding: 36px;
+  }
+
+  /* section ================================= */
+  .shortcuts {
+    display: none;
+  }
+
+  .popupbox {
+    display: none;
+  }
+}
