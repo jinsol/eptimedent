@@ -370,7 +370,7 @@ h2 {
   width: 66.65%;
 }
 
-.cardbox_02 .slick-dots {
+#section .introduction .cardbox_02 .slick-dots {
   position: absolute;
   width: 66%;
   bottom: 0;
@@ -379,16 +379,16 @@ h2 {
   text-align: left;
 }
 
-.cardbox_02 .slick-dots li {
+#section .introduction .cardbox_02 .slick-dots li {
   display: inline-block;
   padding: 60px 0;
 }
 
-.cardbox_02 .slick-dots li.slick-active button {
+#section .introduction .cardbox_02 .slick-dots li.slick-active button {
   background-color: #ff9966;
   opacity: 1;
 }
-.cardbox_02 .slick-dots li button {
+#section .introduction .cardbox_02 .slick-dots li button {
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -573,12 +573,6 @@ h2 {
   margin-bottom: 20px;
   display: flex;
 }
-
-/* #section .community .cardbox li:nth-child(3) > a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 
 #section .community .blogbox {
   font-size: 16px;
