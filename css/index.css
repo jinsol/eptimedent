@@ -54,6 +54,12 @@ h2 {
   font-size: 46px;
 }
 
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+
 /* 공통속성 끝 */
 /* header ================================= */
 
@@ -113,6 +119,14 @@ h2 {
 
 #header .header_logo .header_logoImage a img {
   width: 200px;
+}
+
+#header .header_logo .menuopen {
+  display: none;
+  position: absolute;
+  right: 36px;
+  font-size: 28px;
+  color: #2f2f2f;
 }
 
 /* header Nav ================================= */
@@ -321,6 +335,7 @@ h2 {
 #section .introduction .textbox p {
   padding: 40px 0;
   color: gray;
+  word-break: keep-all;
 }
 
 #section .introduction .cardbox_01 {
