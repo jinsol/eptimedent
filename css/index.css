@@ -203,10 +203,9 @@ h2 {
 
   position: absolute;
   width: 100%;
-
-  visibility: hidden;
   opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s ease;
+
+  transition: all 0.5s;
 }
 
 #header .header_nav_mainmenu:first-child .depth_02 {
@@ -214,7 +213,6 @@ h2 {
 }
 
 #header.active .header_nav .depth_02 {
-  visibility: visible;
   opacity: 1;
 }
 
