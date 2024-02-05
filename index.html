@@ -533,7 +533,20 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 1000,
-                cssEase: 'linear'
+                cssEase: 'linear',
+                responsive: [{
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+                ]
             });
 
             document.querySelector(".mainSlide .slick-dots li:nth-child(1)").textContent = "전문의 2인 진료";
@@ -630,7 +643,9 @@
                 });
                 $(".header_nav_mainmenu").on("click", function () {
                     $(this).children().toggleClass("active");
+                    $(this).siblings().children().removeClass("active");
                 });
+
             };
 
 

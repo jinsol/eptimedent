@@ -8,6 +8,7 @@
 
   #header.active .header_nav {
     display: block;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.1);
   }
 
   #header .header_info {
@@ -48,6 +49,10 @@
   }
   #header .depth_01 .depth_02.active {
     display: block;
+  }
+
+  #header .depth_01 .header_nav_mainmenu:hover .depth_02 {
+    background-color: unset;
   }
 
   #header .header_nav_mainmenu:first-child .depth_02 {
