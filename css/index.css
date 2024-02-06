@@ -344,13 +344,27 @@ h2 {
   margin: 20px 0 80px 0;
 }
 
-#section .introduction .cardbox_01 li {
+#section .introduction .cardbox_01 .iconbox {
   flex: 1 1 25%;
   border: 1px solid #eaeeef;
+  display: flex;
+  justify-content: center;
 }
 
-#section .introduction .cardbox_01 li a {
-  display: block;
+#section .introduction .cardbox_01 .iconbox img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+#section .introduction .cardbox_01 .iconbox a {
+  font-size: 24px;
+  font-weight: 900;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 18px 0;
 }
 
 #section .introduction .cardbox_02 {

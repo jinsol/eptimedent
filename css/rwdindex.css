@@ -82,16 +82,27 @@
   }
 
   #section .introduction .textbox p {
-    padding: 40px 36px;
+    padding: 20px 36px;
   }
 
   #section .introduction .cardbox_01 {
+    justify-content: space-evenly;
+  }
+  #section .introduction .cardbox_01 .iconbox {
+    border: 0px solid #eaeeef;
+    flex: none;
+  }
+  #section .introduction .cardbox_01 .iconbox a {
     flex-direction: column;
-    margin: 20px 0 0 0;
+    font-size: 18px;
   }
 
-  #section .introduction .cardbox_01 li {
-    flex: 1 1 50%;
+  #section .introduction .cardbox_01 .iconbox img {
+    width: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin-bottom: 8px;
   }
 
   #section .introduction .cardbox_02 > li {
