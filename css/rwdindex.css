@@ -2,20 +2,31 @@
 
 @media screen and (max-width: 960px) {
   /* header ================================= */
+
+  #header {
+    position: fixed;
+  }
+
   #header .header_nav {
     display: none;
+    transition: none;
   }
 
   #header.active .header_nav {
-    display: block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  #header.active .header_nav {
     box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  #header.active .header_navline {
+    display: none;
   }
 
   #header .header_info {
     display: none;
-  }
-  #header .row {
-    padding: 0 36px;
   }
 
   #header .header_logo .header_logoAd {
@@ -34,9 +45,22 @@
     justify-content: flex-start;
   }
 
+  #header .depth_01 .header_nav_mainmenu {
+    padding: 0 36px;
+  }
+
+  #header .depth_01 .header_nav_mainmenu.active {
+    background-color: rgba(0, 155, 240, 0.05);
+  }
+
   #header .depth_01 .header_nav_mainmenu > a {
     justify-content: flex-start;
   }
+
+  #header .depth_01 .header_nav_mainmenu > a:not(:last-child) {
+    border-bottom: 1px solid #eaeeef;
+  }
+
   #header .depth_01 .header_nav_mainmenu > a::after {
     display: none;
   }
@@ -46,9 +70,7 @@
     opacity: 1;
     border-right: none;
     display: none;
-  }
-  #header .depth_01 .depth_02.active {
-    display: block;
+    transition: none;
   }
 
   #header .depth_01 .header_nav_mainmenu:hover .depth_02 {
@@ -57,6 +79,14 @@
 
   #header .header_nav_mainmenu:first-child .depth_02 {
     border-left: none;
+  }
+
+  #header .depth_02 li a {
+    border-bottom: 1px solid #eaeeef;
+  }
+
+  #header .depth_02 li:last-child a:last-child {
+    border-bottom: none;
   }
 
   #header .header_logo .menuopen {
@@ -78,7 +108,7 @@
   /* section - 2 - introduction ================================= */
 
   #section .introduction {
-    padding: 60px 0 20px 0;
+    padding: 60px 0 0;
   }
 
   #section .introduction .textbox p {
@@ -110,6 +140,11 @@
     flex: 1 1 50%;
   }
 
+  #section .introduction .cardbox_02 > li .textbox,
+  #section .introduction .cardbox_02 .slick-dots {
+    left: 36px;
+  }
+
   #section .introduction .textbox p #section .introduction .cardbox_02 li,
   #section .introduction .cardbox_02 > li:nth-child(4) {
     flex: 1 1 50%;
@@ -120,7 +155,7 @@
 
   #section .introduction .cardbox_02 li img {
     display: flex;
-    width: 100%;
+    height: 50%;
   }
 
   #section .introduction .cardbox_02 .slick-dots li {
@@ -129,14 +164,18 @@
 
   /* section - 3 - advertisingSlide ================================= */
 
+  #section .advertisingSlide {
+    padding: 0;
+    border-top: 1px solid #eaeeef;
+    border-bottom: 1px solid #eaeeef;
+  }
   #section .advertisingSlide .imagebox {
-    height: 70vw;
-    align-items: center;
+    height: 50vw;
+    align-items: end;
   }
 
   #section .advertisingSlide .imagebox img {
-    max-width: 70%;
-    max-height: 70%;
+    max-height: 90%;
   }
 
   #section .advertisingSlide .textbox {
@@ -149,6 +188,11 @@
 
   #section .advertisingSlide .textbox p {
     font-size: 16px;
+    padding: 14px 0;
+  }
+
+  #section .advertisingSlide .slick-dots li {
+    padding: 14px 0;
   }
 
   #section .advertisingSlide .slick-dots {
@@ -158,8 +202,8 @@
   /* section - 4 - community ================================= */
 
   #section .community {
+    padding: 60px 0;
     background-image: none;
-    border-bottom: 1px solid #eaeeef;
   }
 
   #section .community .titlebox h2 {
@@ -168,6 +212,9 @@
 
   #section .community .cardbox {
     flex-direction: column;
+  }
+  #section .community .cardbox > li {
+    border-bottom: 1px solid #eaeeef;
   }
 
   #section .community .cardbox > li > a {
@@ -234,5 +281,13 @@
   #section .introduction .cardbox_02 li,
   #section .introduction .cardbox_02 > li:nth-child(4) {
     flex: 1 1 100%;
+  }
+
+  #section .introduction .cardbox_02 li img {
+    height: 80%;
+  }
+
+  #section .introduction .cardbox_02 .cardbox_02_slide_a img {
+    height: 50%;
   }
 }

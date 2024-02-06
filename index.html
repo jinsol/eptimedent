@@ -52,7 +52,8 @@
                     </div>
                 </div>
                 <h1 class="header_logoImage"><a href="#"><img src="./image/logo.png" alt="은평타임치과 로고"></a></h1>
-                <div class="menuopen"><a href="#"><span class="blind">menu</span> <i class="fa-solid fa-bars"></i></a>
+                <div class="menuopen"><a href="javascript:;"><span class="blind">menu</span> <i
+                            class="fa-solid fa-bars"></i></a>
                 </div>
             </div>
             <div class="line"></div>
@@ -185,26 +186,60 @@
                         </li>
                     </ul>
                     <ul class="cardbox_02 animate__animated animate__fadeIn">
-                        <li><a href="#"><img src="./image/mbannerB01.jpg" alt="네비게이션 임플란트"></a></li>
-                        <li><a href="#"><img src="./image/mbannerB02.jpg" alt="자연치아 살리기"></a></li>
-                        <li><a href="#"><img src="./image/mbannerB03.jpg" alt="일반진료"></a></li>
-                        <li><a href="#"><img src="./image/mbannerB04.jpg" alt="예방진료"></a></li>
+                        <li><a href="#">
+                                <img src="./image/mbannerB01.jpg" alt="네비게이션 임플란트">
+                                <div class="textbox">
+                                    <h3><span>네비게이션</span><span>임플란트</span></h3>
+                                    <p><span>구강악안면외과, 보존과</span> <span>풍부한 임상 경험을 바탕으로</span> <span>안전한 임플란트 시술을
+                                            진행합니다</span></p>
+                                </div>
+                            </a></li>
+                        <li><a href="#"><img src="./image/mbannerB02.jpg" alt="자연치아 살리기">
+                                <div class="textbox">
+                                    <h3>자연치아 살리기</h3>
+                                    <p><span>모든 치료방법을 동원하여</span> <span>자연치아를 살리는 것을 우선시 합니다</span></p>
+                                </div>
+                            </a></li>
+                        <li><a href="#"><img src="./image/mbannerB03.jpg" alt="일반진료">
+                                <div class="textbox">
+                                    <h3>일반진료</h3>
+                                    <p><span>치료의 두려움을 공감하며,</span> <span>세심한 진료를 약속드립니다</span></p>
+                                </div>
+                            </a></li>
+                        <li><a href="#"><img src="./image/mbannerB04.jpg" alt="예방진료">
+                                <div class="textbox">
+                                    <h3>예방치료</h3>
+                                    <p><span>예방 중심의 치료,</span> <span>자연치를 살리는 치료에 집중합니다</span></p>
+                                </div>
+                            </a></li>
                         <li>
                             <div class="slideOuter">
                                 <div class="slideInner">
                                     <div class="slide">
-                                        <a href="#">
+                                        <a href="#" class="cardbox_02_slide_a cardbox_02_slide_a_1">
                                             <img src="./image/mbannerB05_1.jpg" alt="자연치아 살리기 - 단계별 진료">
+                                            <div class="textbox">
+                                                <h3>자연치아 살리기<strong>단계별 진료</strong></h3>
+                                                <p>은평타임치과는 치아보존 치료에 집중</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="slide">
-                                        <a href="#">
+                                        <a href="#" class="cardbox_02_slide_a cardbox_02_slide_a_2">
                                             <img src="./image/mbannerB05_2.jpg" alt="믿을 수 있는 임플란트 진료">
+                                            <div class="textbox">
+                                                <h3>믿을 수 있는 <strong>임플란트 진료</strong></h3>
+                                                <p><span>임플란트 보증제</span> <span>최소절개 및 통증 최소화</span></p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="slide">
-                                        <a href="#">
+                                        <a href="#" class="cardbox_02_slide_a cardbox_02_slide_a_3">
                                             <img src="./image/mbannerB05_3.jpg" alt="항상 필수! 치과 정기검진">
+                                            <div class="textbox">
+                                                <h3>항상 필수! <strong>치과 정기검진</strong></h3>
+                                                <p>치아건강관리, 정기검진이 중요합니다</p>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -465,10 +500,10 @@
                         </li>
                     </ul>
                 </li>
-                <li class="shortcutsbox_bt"><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
+                <li class="shortcutsbox_bt"><a href="javascript:;"><i class="fa-solid fa-angle-left"></i></a></li>
             </ul>
         </aside>
-        <aside class="popupbox">
+        <aside class="popupbox active">
             <div class="slideOuter">
                 <div class="slideInner">
                     <div class="slide">
@@ -479,6 +514,7 @@
                     </div>
                 </div>
             </div>
+            <div class="close"><i class="fa-solid fa-xmark"></i><span class="blind">닫기</span></div>
         </aside>
         <div class="blackbox"></div>
         <script>
@@ -514,7 +550,7 @@
             });
 
             $('.advertisingSlide .slideInner').slick({
-                autoplay: true,
+                autoplay: false,
                 dots: true,
                 Infinite: true,
                 arrows: false,
@@ -626,35 +662,73 @@
                 };
             }
 
-            // 고민중 (클릭했을 때 이미지 변환, 다시 클릭하면 다시 이미지 변환)
+            // ☀️자바스크립트방식☀️ 고민중(클릭했을 때 이미지 변환, 다시 클릭하면 다시 이미지 변환)
             // let popupbox = document.querySelector(".popupbox");
             // let popupimage = document.querySelectorAll(".popupbox img");
 
-            // popupimage.forEach(function (value, index) {
-            //     value.setAttribute("src", "./image/event_go0" + (index + 1) + ".png");
-            // });
-
             // popupbox.onclick = function () {
             //     popupimage.forEach(function (value, index) {
-            //         value.setAttribute("src", "./image/right_banner0" + (index + 1) + ".png");
+            //         value.setAttribute("src", "./image/event_go0" + (index + 1) + ".png");
+            //         value.classList.add("passive");
             //     });
             // };
 
+            // 제이쿼리방식
+
+            $(".popupbox .slick-list").on("click", function () {
+                $(this).toggleClass("passive");
+                if ($(this).hasClass("passive")) {
+                    for (let i = 0; i < $(".popupbox img").length; i++) {
+                        $(".popupbox img").eq(i).attr("src", `./image/event_go0${i + 1}.png`);
+                    }
+                } else {
+                    for (let i = 0; i < $(".popupbox img").length; i++) {
+                        $(".popupbox img").eq(i).attr("src", `./image/right_banner0${i + 1}.png`);
+                    }
+
+                }
+
+            });
+
+
+
+
+            $(".cardbox_02>li").height($(".cardbox_02>li").width());
+            $(".cardbox_02_slide_a").height($(".cardbox_02>li").width());
+
+            if ($(window).width() <= 520) {
+                $(".cardbox_02>li").height($(".cardbox_02>li").width() / 2);
+                $(".cardbox_02>li:last-child").height($(".cardbox_02>li").width());
+            }
+
 
             if ($("html").hasClass("mobile")) {
-                $(".menuopen>a").on("click", function () {
+
+                $("#section").css({ marginTop: $("#header").height() });
+
+
+                $(".menuopen > a").on("click", function () {
                     $("#header").toggleClass("active");
+                    $("#header").children(".header_nav").slideToggle();
+                    $(".blackbox").toggleClass("active");
                 });
                 $(".header_nav_mainmenu").on("click", function () {
-                    $(this).children().toggleClass("active");
-                    $(this).siblings().children().removeClass("active");
+                    // $(this).children().toggleClass("active");
+                    // $(this).siblings().children().removeClass("active");
+                    $(this).addClass("active").siblings().removeClass("active");
+                    $(this).children(".depth_02").stop().slideToggle();
+                    $(this).siblings().children(".depth_02").slideUp();
+
+
                 });
 
             };
 
 
 
-
+            $(".popupbox .close").on("click", function () {
+                $(this).parent().hide();
+            });
 
         </script>
     </body>
