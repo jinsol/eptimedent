@@ -214,7 +214,7 @@
   /* section - 4 - community ================================= */
 
   #section .community {
-    padding: 60px 0 0;
+    padding: 40px 0 0;
     background-image: none;
     background-color: whitesmoke;
     border-bottom: 1px solid #eaeeef;
@@ -222,6 +222,7 @@
 
   #section .community .titlebox h2 {
     color: #2f2f2f;
+    /* border-bottom: 1px solid #eaeeef; */
   }
 
   #section .community .cardbox {
@@ -238,6 +239,10 @@
     min-height: 350px;
   }
 
+  /* #section .community .cardbox li:nth-child(odd) {
+    background-color: white;
+    
+  } */
   #section .community .cardbox li:nth-child(1) > a {
     flex-direction: row;
     align-items: flex-start;
@@ -340,6 +345,11 @@
 
   .popupbox {
     display: none;
+  }
+
+  .footer_info {
+    width: 100%;
+    padding: 0 36px;
   }
 }
 
