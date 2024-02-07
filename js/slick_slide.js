@@ -29,7 +29,7 @@ $(".introduction .cardbox_02 .slideInner").slick({
 });
 
 $(".advertisingSlide .slideInner").slick({
-  autoplay: false,
+  autoplay: true,
   dots: true,
   Infinite: true,
   arrows: false,
