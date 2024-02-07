@@ -83,8 +83,8 @@ function setting_pcPopup() {
 
   // ☀️제이쿼리방식☀️
   $(".popupbox .slick-list").on("click", function () {
-    $(this).toggleClass("passive");
-    if ($(this).hasClass("passive")) {
+    $(".popupbox").toggleClass("passive");
+    if ($(".popupbox").hasClass("passive")) {
       for (let i = 0; i < $(".popupbox img").length; i++) {
         $(".popupbox img")
           .eq(i)
@@ -100,7 +100,7 @@ function setting_pcPopup() {
   });
 
   $(".popupbox .close").on("click", function () {
-    $(this).parent().hide();
+    $(".popupbox").hide();
   });
 }
 

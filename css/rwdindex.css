@@ -1,6 +1,9 @@
 /* rwdindex.css */
 
 @media screen and (max-width: 960px) {
+  h2 {
+    font-size: 34px;
+  }
   /* header ================================= */
 
   #header {
@@ -204,6 +207,10 @@
     left: 36px;
   }
 
+  #section .advertisingSlide .advertisingSlide_bt {
+    display: none;
+  }
+
   /* section - 4 - community ================================= */
 
   #section .community {
@@ -220,24 +227,20 @@
   #section .community .cardbox {
     flex-direction: column;
   }
-  #section .community .cardbox > li {
-  }
 
   #section .community .cardbox > li > a {
     display: flex;
   }
 
   #section .community .cardbox > li > a:last-child {
+    position: relative;
     flex-direction: column;
+    min-height: 350px;
   }
 
   #section .community .cardbox li:nth-child(1) > a {
     flex-direction: row;
     align-items: flex-start;
-    position: relative;
-  }
-
-  #section .community .cardbox > li > a:last-child {
     position: relative;
   }
 
@@ -269,6 +272,10 @@
     object-fit: cover;
   }
 
+  #section .community .cardbox li:nth-child(1) .imagebox img {
+    object-position: right;
+  }
+
   #section .community .cardbox li:nth-child(2) .imagebox {
     margin-bottom: 0;
     justify-content: flex-end;
@@ -282,21 +289,28 @@
   }
 
   #section .community .cardbox > li:nth-child(even) > a {
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
+    border-top: 1px solid #eaeeef;
+    border-bottom: 1px solid #eaeeef;
   }
   #section .community .cardbox > li > a:hover {
     transform: rotateZ(0);
   }
+
   #section .community .cardbox li:nth-child(1) .textbox {
     flex-basis: 55%;
   }
-  #section .community .cardbox li .textbox {
+  #section .community .cardbox li:nth-child(2) .textbox {
     width: 55%;
     min-height: 240px;
   }
 
-  #section .community .cardbox li:nth-child(3) .textbox .text {
+  #section .community .cardbox li:nth-child(3) .textbox {
+    width: 100%;
+  }
+
+  #section .community .cardbox li:nth-child(1) .imagebox,
+  #section .community .cardbox li:nth-child(2) .imagebox {
+    transition: all 0.5s;
   }
 
   /* section - 5 - information ================================= */
@@ -330,6 +344,23 @@
 }
 
 @media screen and (max-width: 520px) {
+  /* 폰트사이즈 조정 */
+
+  #section .introduction .cardbox_02 > li .textbox h3,
+  #section .introduction .cardbox_02 .cardbox_02_slide_a .textbox h3,
+  #section .advertisingSlide .textbox h3,
+  #section .information h3 {
+    font-size: 24px;
+  }
+
+  #section .mainSlide .textbox p,
+  #section .introduction .textbox p,
+  #section .introduction .cardbox_01 .iconbox a,
+  #section .introduction .cardbox_02 > li:nth-child(1) .textbox p,
+  #section .introduction .cardbox_02 > li .textbox p {
+    font-size: 16px;
+  }
+
   #section .introduction .cardbox_02 li,
   #section .introduction .cardbox_02 > li:nth-child(4) {
     flex: 1 1 100%;
@@ -341,5 +372,10 @@
 
   #section .introduction .cardbox_02 .cardbox_02_slide_a img {
     height: 60%;
+  }
+
+  #section .community .cardbox li:nth-child(1) .imagebox,
+  #section .community .cardbox li:nth-child(2) .imagebox {
+    padding: 0;
   }
 }
