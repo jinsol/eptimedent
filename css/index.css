@@ -9,6 +9,7 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* 공통속성 시작 */
 
@@ -21,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pretendard-Regular", sans-serif;
+  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
   letter-spacing: -0.8px;
 }
 img {
@@ -892,9 +893,11 @@ h2 {
 
   opacity: 0;
   transition: all 0.5s;
+  visibility: hidden;
 }
 .blackbox.active {
   opacity: 1;
+  visibility: visible;
 }
 
 /* aside - topbox ================================= */

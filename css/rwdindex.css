@@ -156,6 +156,11 @@
   #section .introduction .cardbox_02 li img {
     display: flex;
     height: 50%;
+    object-fit: cover;
+  }
+
+  #section .introduction .cardbox_02 .cardbox_02_slide_a img {
+    height: 80%;
   }
 
   #section .introduction .cardbox_02 .slick-dots li {
@@ -202,8 +207,10 @@
   /* section - 4 - community ================================= */
 
   #section .community {
-    padding: 60px 0;
+    padding: 60px 0 0;
     background-image: none;
+    background-color: whitesmoke;
+    border-bottom: 1px solid #eaeeef;
   }
 
   #section .community .titlebox h2 {
@@ -214,7 +221,6 @@
     flex-direction: column;
   }
   #section .community .cardbox > li {
-    border-bottom: 1px solid #eaeeef;
   }
 
   #section .community .cardbox > li > a {
@@ -228,6 +234,11 @@
   #section .community .cardbox li:nth-child(1) > a {
     flex-direction: row;
     align-items: flex-start;
+    position: relative;
+  }
+
+  #section .community .cardbox > li > a:last-child {
+    position: relative;
   }
 
   #section .community .cardbox li:nth-child(2),
@@ -237,14 +248,55 @@
 
   #section .community .cardbox li:nth-child(1) .imagebox {
     min-height: unset;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    padding: 36px;
   }
 
   #section .community .cardbox > li > a {
     border-bottom-right-radius: 0;
     box-shadow: none;
+    background-color: unset;
+  }
+
+  #section .community .cardbox li:nth-child(1) .imagebox img,
+  #section .community .cardbox li:nth-child(2) .imagebox img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #section .community .cardbox li:nth-child(2) .imagebox {
+    margin-bottom: 0;
+    justify-content: flex-end;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    padding: 36px;
+  }
+
+  #section .community .cardbox > li:nth-child(even) > a {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
   }
   #section .community .cardbox > li > a:hover {
     transform: rotateZ(0);
+  }
+  #section .community .cardbox li:nth-child(1) .textbox {
+    flex-basis: 55%;
+  }
+  #section .community .cardbox li .textbox {
+    width: 55%;
+    min-height: 240px;
+  }
+
+  #section .community .cardbox li:nth-child(3) .textbox .text {
   }
 
   /* section - 5 - information ================================= */
@@ -284,10 +336,10 @@
   }
 
   #section .introduction .cardbox_02 li img {
-    height: 80%;
+    height: 70%;
   }
 
   #section .introduction .cardbox_02 .cardbox_02_slide_a img {
-    height: 50%;
+    height: 60%;
   }
 }
