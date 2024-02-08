@@ -1,15 +1,10 @@
-// 화면 사이즈가 바뀔 때 값을 다시 정의 필요
-// 화면 사이즈(960px)보다 작으면 일정 스크립트들은 작동하지 않게 수정 필요
-
 // 1️⃣ PC인지 mobile 사이즈인지 정하기
 function setting_pcMobile() {
   let ww = $(window).width();
   if (ww > 960) {
-    $("html").removeClass("mobile");
-    $("html").addClass("PC");
+    $("html").addClass("PC").removeClass("mobile");
   } else {
-    $("html").removeClass("PC");
-    $("html").addClass("mobile");
+    $("html").addClass("mobile").removeClass("PC");
   }
 }
 
@@ -46,12 +41,12 @@ function setting_pc() {
     // 모든 depth_02에 최대 높이 적용 (유사배열이라 forEach 사용)
     depth_02.forEach(function (value, index) {
       // 숫자로 값을 받아오면 뒤에 px 단위 삽입
-      value.style.height = `${maxHeight + 15}px`;
+      value.style.height = `${maxHeight}px`;
     });
 
     // 표준이벤트모델 (depth_01에 마우스를 올리거나 내릴 때)
     depth_01.addEventListener("mouseover", function () {
-      header_nav.style.height = `${maxHeight + minHeight + 15}px`;
+      header_nav.style.height = `${maxHeight + minHeight}px`;
       header.classList.add("active");
       document.querySelector(".blackbox").classList.add("active");
     });
@@ -121,8 +116,13 @@ function setting_mobile() {
     $("#section").css({ marginTop: $("#header").height() });
 
     $(".menuopen > a").on("click", function () {
+      if (!$(".menuopen > a").find("i").hasClass("fa-bars")) {
+        $(".depth_02").stop().slideUp();
+        $(".header_nav_mainmenu").removeClass("active");
+      }
       $("#header").toggleClass("active");
       $("#header").children(".header_nav").slideToggle();
+      $(this).find("i").toggleClass("fa-bars fa-times");
       $(".blackbox").toggleClass("active");
     });
     $(".header_nav_mainmenu").on("click", function () {
